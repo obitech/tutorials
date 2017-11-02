@@ -1,0 +1,68 @@
+puts							put a string on screen
+= 								operator, assings value
+#{}								String interpolation
+# 								comment
+*								operator, multiply
+true / false					boolean data type
+print							print on screen, no line break
+%								Modulus, divides left by right and returns remainder
+								comparison, OR
+								Hash map?
+\n 								line break in string
+""" 							multi line string
+gets.chomp						gets a line of text minus the line break
+.to_i							transforms to integer
+.to_f							transforms to floating point
+ARGV							assigns argument passed by command line
+ARGV.first						needed when only one argument is passed
+$stdin.gets.chomp				needed when ARGV is used
+puts <..>, <..>					functions as second puts
+open(x, y)						invokes File method open with two arguments:
+								x -> filename
+								y -> read/write mode ("r", "w")
+foo.read 						grabs contets of file							
+foo.close						closes file !!
+foo.truncate(x)					truncates (cuts down) to x byte of file	
+foo.write(x)					writes x to file
+File.exist?(x)					checks if x exists
+def() .. end					function
+foo.seek(x)						rewinds file to x byte
+x.uniq!							removes duplicates of array
+.round(x)						rounds integer to x decimal places (omitting x is int)
+<var> <<NAME					heredoc, whole section in betwoeen  NAMEs turned into string
+	..
+NAME	
+.split							splits string and creates array with words
+.sort							sorts Array
+.shift							shifts array, removes / gets position 0
+.pop							pops array, removes / gets last position
+&&								AND
+||								OR
+!								NOT
+!=								NOT EQUAL
+==								EQUAL
+>=								GREATER THAN EQUAL
+<=								LESS THAN EQUAL
+true
+false
+BEGIN {...}						Runs code in block before other code is loaded
+END {...}						Runs code after the script is loaded
+alias							
+alias X Y 						Creates copy of function Y on X
+a ||= b 						If a is undefined, evaluate b and set a to the result
+begin 							Starting of a block
+end 							Ends pretty much anything
+ensure							Run this code no matter what
+break							Breaking out of a loop
+case							case conditional (like if)
+class							defines new class
+def 							defines new function
+defined?						Is this X already defined?
+..								Range inclusive (0..3 == 0, 1, 2, 3)
+...								Range non-inclusive (0..3 == 0, 1, 2)
+@								Object/instance scope
+@@ 								Class scope
+$								Global scope
+
+
+

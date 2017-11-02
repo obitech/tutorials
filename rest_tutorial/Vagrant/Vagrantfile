@@ -1,0 +1,25 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  ubuntu = "bento/ubuntu-16.04"
+  debian = "bento/debian-9.1"
+
+  config.vm.box = "#{ubuntu}"
+
+  config.vm.define :rest_tutorial, primary: true do |rest_tutorial_config|
+    config.vm.provider "virtualbox" do |vb|
+      vb.memory = "2048"
+      vb.cpus = 1
+      vb.name = "rest_tutorial"
+    end
+
+  config.vm.network "private_network", ip: "192.168.70.10"
+
+  config.vm.provision "shell", inline: <<-SHELL
+    apt-get update -y
+    apt-get upgrade -y
+    apt-get install vim curl git build-essential python3 pip3 -y
+  SHELL
+  end
+end
